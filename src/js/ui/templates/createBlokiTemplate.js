@@ -15,24 +15,22 @@ export const createBlokTemplate = ({namber, src_bloka, alt_bloka, deta, card_tit
     </div>
 `
 
-export const createLeftBlokiTemplate = (Data_0) => `
+export const createLeftBlokiTemplate = (bloki = []) => `
     <div class="left_blok ">
-        ${createBlokTemplate(Data_0)}
+        ${bloki.map(createBlokTemplate).join('')}
     </div>
 `
 
-export const createCenterBlokiTemplate = ({Data_1, Data_2}) => `
+export const createCenterBlokiTemplate = (bloki = []) => `
     <div class="center_bloki">
-        ${createBlokTemplate(Data_1)}
-        ${createBlokTemplate(Data_2)}
+        ${bloki.map(createBlokTemplate).join('')}
     </div>
 
 `
 
-export const createRightBlokiTemplate = ({Data_3, Data_4}) => `
+export const createRightBlokiTemplate = (bloki = []) => `
     <div class="right_bloki">
-        ${createBlokTemplate(Data_3)}
-        ${createBlokTemplate(Data_4)}
+        ${bloki.map(createBlokTemplate).join('')}
     </div>
 `
 
