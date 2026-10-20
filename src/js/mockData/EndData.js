@@ -12,22 +12,15 @@ export const EndData = {
         },
         FooterColCenter1: {
             TitleColCenter: 'Ссылки',
-            LiData1: 'Овероны',
-            LiData2: 'Соц. сети',
-            LiData3: 'Счетчики',
-            LiData4: 'Контакты'
+            LiData: ['Овероны', 'Соц. сети', 'Счетчики', 'Контакты']
         },
         FooterColCenter2: {
             TitleColCenter: 'Компания',
-            LiData1: 'Условия использования',
-            LiData2: 'Перс. данные',
-            LiData3: 'Контакты',
+            LiData: ['Условия использования', 'Перс. данные', 'Контакты']
         },
         FooterColRight: {
             TitleColRight: 'Контакты',
-            text1: 'ул. Профессора Поздеева, 13, к.Г, Пермь',
-            text2: '+7 (342) 2-198-520',
-            text3: 'info@pstu.ru'
+            texts: ['ул. Профессора Поздеева, 13, к.Г, Пермь', '+7 (342) 2-198-520', 'info@pstu.ru']
         }
     }
 };  

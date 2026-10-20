@@ -17,36 +17,24 @@ export const createLiElementTemplate = (textLi) => `
     <li class="ccskrf_li"><a href="#" class="footer-link">${textLi}</a></li> 
 `
 
-export const createFooterColCenter1Template = ({TitleColCenter, LiData1, LiData2, LiData3, LiData4}) => `
+export const createFooterColCenterTemplate = ({TitleColCenter, LiData = []}) => `
     <div class="footer-col">
         <h4 class="footer-title_a">${TitleColCenter}</h4>
         <ul class="footer-list">
-            ${createLiElementTemplate(LiData1)}
-            ${createLiElementTemplate(LiData2)}
-            ${createLiElementTemplate(LiData3)}
-            ${createLiElementTemplate(LiData4)}
+            ${LiData.map(createLiElementTemplate).join('')}
         </ul>
     </div>
 `
 
-export const createFooterColCenter2Template = ({TitleColCenter, LiData1, LiData2, LiData3}) => `
-    <div class="footer-col">
-        <h4 class="footer-title_a">${TitleColCenter}</h4>
-        <ul class="footer-list">
-            ${createLiElementTemplate(LiData1)}
-            ${createLiElementTemplate(LiData2)}
-            ${createLiElementTemplate(LiData3)}
-        </ul>
-    </div>
-`
+export const createContactItemTemplate = (text) => `
+    <li class="footer-contact-item">${text}</li>
+`;
 
-export const createFooterColRightTemplate = ({TitleColRight, text1, text2, text3}) => `
+export const createFooterColRightTemplate = ({TitleColRight, texts = []}) => `
     <div class="footer-col">
             <h4 class="footer-title">${TitleColRight}</h4>
             <ul class="footer-list">
-              <li class="footer-contact-item">${text1}</li>
-              <li class="footer-contact-item">${text2}</li>
-              <li class="footer-contact-item">${text3}</li>
+                ${texts.map(createContactItemTemplate).join('')}
             </ul>
           </div>
 `
@@ -54,8 +42,8 @@ export const createFooterColRightTemplate = ({TitleColRight, text1, text2, text3
 export const createFooterGridTemplate = ({FooterColLeft, FooterColCenter1, FooterColCenter2, FooterColRight}) => `
     <div class="footer-grid">
         ${createFooterColLeftTemplate(FooterColLeft)}
-        ${createFooterColCenter1Template(FooterColCenter1)}
-        ${createFooterColCenter2Template(FooterColCenter2)}
+        ${createFooterColCenterTemplate(FooterColCenter1)}
+        ${createFooterColCenterTemplate(FooterColCenter2)}
         ${createFooterColRightTemplate(FooterColRight)}   
     </div>
 `
